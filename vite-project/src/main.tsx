@@ -1,14 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
 import './index.css'
+import Mock from './mock'
 import GlobalStyle from './assets/GlobalStyle'
-import {BrowserRouter} from 'react-router-dom'
+import {RouterProvider} from 'react-router-dom'
+import Router from './routers';
+new Mock();
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter>
-    <App />
+    <RouterProvider router={Router}/>
     <GlobalStyle />
-    </BrowserRouter>
   </React.StrictMode>
 )
